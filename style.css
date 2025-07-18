@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: sans-serif;
+    color: #fff;
+    transition: 3s fadeIn}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url("IMG/Scene-12.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header > .logo{
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-top: 5px;
+}
+
+header > ul{
+    display: flex;
+    list-style: none;
+}
+
+header > ul > li{
+    padding: 10px 30px;
+    
+}
+
+header > ul > li:last-child{
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+header button{
+    display: none;
+}
+
+.login-container{
+    margin: auto;
+    padding: 2rem;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-container > h1{
+    color: #213;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.login-container > form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.login-container > form > input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #213;
+    font-size: 1.2rem;
+    color: #213;
+}
+.login-container > form > input::placeholder{
+    color: #213;
+}
+
+.login-container > form > input:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.login-container > form > .info-extra{
+    display: flex;
+    justify-content: space-between;
+    font-size: .8rem;
+    color: #213;
+}
+
+.login-container  a{
+    color: #213;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-container > button{
+    width: 100%;
+    padding: 8px 0;
+    background-color: #213;
+    border: none;
+    color: #fff;
+    font-size: 1.05rem;
+}
+
+.login-container > span{
+    color: #213;
+}
+
+@media(max-width: 680px){
+    .open-menu, .close-menu{
+        display: block;
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 2rem;
+        z-index: 100;
+    }
+
+    ul{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(5px);
+        background-color: rgba(40, 84, 104, 0.8);
+        z-index: 99;
+    }
+    .visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    ul > li:hover{
+        font-weight: bold;
+    }
+}
